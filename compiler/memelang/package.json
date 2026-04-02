@@ -1,0 +1,17 @@
+{
+  "name": "memelang",
+  "version": "1.0.0",
+  "description": "MemeLang  A BTech CSE meme-based programming language with full-stack interpreter. Compiler Design PBL  Team: Core Dumpers",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js"
+  },
+  "keywords": ["memelang", "interpreter", "compiler", "btech", "pbl"],
+  "author": "Core Dumpers  BTech CSE 3rd Year",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  }
+}
