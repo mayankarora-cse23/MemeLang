@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MemeLang : The BTech CSE Programming Language</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Bangers&family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo" onclick="scrollTo(0,0)">MEME<span>LANG</span></div>
+  <div class="nav-links">
+    <a href="#syntax">Syntax</a>
+    <a href="#examples">Examples</a>
+    <a href="#ide-section" class="nav-btn">Try It Live</a>
+  </div>
+  <div class="server-status" id="server-status">
+    <div class="status-dot" id="status-dot"></div>
+    <span id="status-text">connecting...</span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">BTech CSE 3rd Year  Compiler Design PBL  Team: Core Dumpers</div>
+  <div class="hero-title">MEME<span>LANG</span></div>
+  <div class="hero-subtitle">A programming language for people who <strong>haven't slept since Tuesday</strong></div>
+  <div class="tag-row">
+    <span class="tag cyan">.meme files</span>
+    <span class="tag red">Express.js Backend</span>
+    <span class="tag green">Full-Stack Project</span>
+    <span class="tag yellow">Turing Complete (probably)</span>
+  </div>
+  <div class="hero-cta">
+    <a href="#ide-section" class="btn-primary"> &nbsp;Run Your First .meme</a>
+    <a href="#syntax" class="btn-secondary">Read the Docs</a>
+  </div>
+  <div class="scroll-hint"> SCROLL </div>
+</div>
+
+<hr class="divider">
+
+
+<hr class="divider">
+
+<!-- KEYWORDS -->
+<div class="section" id="syntax">
+  <div class="section-label">// 02  SYNTAX</div>
+  <div class="section-title">The Sacred Keywords</div>
+  <p>All programs must start with <code>padh le bhai</code> and end with <code>main chala</code>. Anything outside is ignored (like your attendance).</p>
+
+  <div class="kw-grid">
+    <div class="kw-item"><div><div class="kw-code">padh le bhai</div><div class="kw-equiv"><div class="meaning">Program Start</div>like <code>int main()</code> but with more regret</div></div></div>
+    <div class="kw-item"><div><div class="kw-code">main chala</div><div class="kw-equiv"><div class="meaning">Program End</div>you survived. barely.</div></div></div>
+    <div class="kw-item"><div><div class="kw-code">yaar ye hai</div><div class="kw-equiv"><div class="meaning">Variable Declaration</div>equivalent to <code>var/let</code></div></div></div>
+    <div class="kw-item"><div><div class="kw-code">bol yaar</div><div class="kw-equiv"><div class="meaning">Print / Output</div>printf but with feelings</div></div></div>
+    <div class="kw-item"><div><div class="kw-code">sun yaar</div><div class="kw-equiv"><div class="meaning">Input (stdin)</div>listening (unlike your prof)</div></div></div>
+    <div class="kw-item"><div><div class="kw-code">scene hai</div><div class="kw-equiv"><div class="meaning">true (boolean)</div>it's valid, it's happening</div></div></div>
+    <div class="kw-item"><div><div class="kw-code">scene nahi</div><div class="kw-equiv"><div class="meaning">false (boolean)</div>nope. rejected. denied.</div></div></div>
+    <div class="kw-item"><div><div class="kw-code">null pointer tha</div><div class="kw-equiv"><div class="meaning">null / nil</div>the classic BTech villain</div></div></div>
+    <div class="kw-item"><div><div class="kw-code">agar scene ho</div><div class="kw-equiv"><div class="meaning">if condition</div>if things are looking good</div></div></div>
+    <div class="kw-item"><div><div class="kw-code">warna yaar</div><div class="kw-equiv"><div class="meaning">else</div>plan B (also didn't work)</div></div></div>
+    <div class="kw-item"><div><div class="kw-code">nahi to scene</div><div class="kw-equiv"><div class="meaning">else if</div>middle child of conditionals</div></div></div>
+    <div class="kw-item"><div><div class="kw-code">jab tak grind</div><div class="kw-equiv"><div class="meaning">while loop</div>grind until it works</div></div></div>
+    <div class="kw-item"><div><div class="kw-code">bas kar yaar</div><div class="kw-equiv"><div class="meaning">break</div>I quit. I'm done. goodbye.</div></div></div>
+    <div class="kw-item"><div><div class="kw-code">skip kar</div><div class="kw-equiv"><div class="meaning">continue</div>like skipping 8am lecture</div></div></div>
+    <div class="kw-item"><div><div class="kw-code">kaam karo</div><div class="kw-equiv"><div class="meaning">function declaration</div>do your job, please</div></div></div>
+    <div class="kw-item"><div><div class="kw-code">lele result</div><div class="kw-equiv"><div class="meaning">return value</div>here's your output, go away</div></div></div>
+    <div class="kw-item"><div><div class="kw-code">// bhai sun</div><div class="kw-equiv"><div class="meaning">Single-line comment</div>inline annotation, ignored by compiler</div></div></div>
+    <div class="kw-item"><div><div class="kw-code">/* ruk yaar */</div><div class="kw-equiv"><div class="meaning">Multi-line comment</div>long explanation nobody reads</div></div></div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- EXAMPLES -->
+<div class="section" id="examples">
+  <div class="section-label">// 03  EXAMPLES</div>
+  <div class="section-title">Real Programs, Real Trauma</div>
+
+  <div class="highlight-text" style="margin-bottom:12px">1. Hello World</div>
+  <div class="example-pair">
+    <div class="example-card">
+      <div class="example-card-header vs">R bhai-lang</div>
+      <pre><span class="kw">hi bhai</span>
+  <span class="kw">bol bhai</span> <span class="str">"Hello bhai"</span>;
+<span class="kw">bye bhai</span></pre>
+    </div>
+    <div class="example-card">
+      <div class="example-card-header ml">S& MemeLang</div>
+      <pre><span class="kw">padh le bhai</span>
+  <span class="kw">bol yaar</span> <span class="str">"Bhai exam kal hai"</span>;
+<span class="kw">main chala</span></pre>
+    </div>
+  </div>
+
+  <div class="highlight-text" style="margin-bottom:12px">2. Variables &amp; If-Else</div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-filename">attendance_judge.meme</span><span class="code-lang">MemeLang</span></div>
+    <pre><span class="kw">padh le bhai</span>
+  <span class="kw">yaar ye hai</span> attendance = <span class="num">63</span>;
+
+  <span class="kw">agar scene ho</span> (attendance >= <span class="num">75</span>) {
+    <span class="kw">bol yaar</span> <span class="str">"Padh liya bhai, exam de sakta hai"</span>;
+  } <span class="kw">nahi to scene</span> (attendance >= <span class="num">60</span>) {
+    <span class="kw">bol yaar</span> <span class="str">"Medical certificate laao bhai"</span>;
+  } <span class="kw">warna yaar</span> {
+    <span class="kw">bol yaar</span> <span class="str">"Bhai tujhe detain kar diya x"</span>;
+  }
+<span class="kw">main chala</span></pre>
+  </div>
+
+  <div class="highlight-text" style="margin-bottom:12px">3. Functions</div>
+  <div class="code-block">
+    <div class="code-header"><span class="code-filename">placement_checker.meme</span><span class="code-lang">MemeLang</span></div>
+    <pre><span class="kw">padh le bhai</span>
+
+  <span class="kw">kaam karo</span> <span class="fn">placement_milegi</span>(cgpa, dsa_done) {
+    <span class="kw">agar scene ho</span> (cgpa >= <span class="num">8.0</span> && dsa_done == <span class="kw">scene hai</span>) {
+      <span class="kw">lele result</span> <span class="str">"Google le jayega bhai xa"</span>;
+    } <span class="kw">nahi to scene</span> (cgpa >= <span class="num">6.5</span>) {
+      <span class="kw">lele result</span> <span class="str">"Service company pakki x""</span>;
+    } <span class="kw">warna yaar</span> {
+      <span class="kw">lele result</span> <span class="str">"Bhai GATE bharo x"</span>;
+    }
+  }
+
+  <span class="kw">yaar ye hai</span> mera_cgpa = <span class="num">7.2</span>;
+  <span class="kw">bol yaar</span> <span class="fn">placement_milegi</span>(mera_cgpa, <span class="kw">scene nahi</span>);
+
+<span class="kw">main chala</span></pre>
+  </div>
+</div>
+
+<hr class="divider">
+
+
+
+<hr class="divider">
+
+
+<hr class="divider">
+
+<!-- ERROR MESSAGES -->
+<div class="section">
+  <div class="section-label">// 06  ERRORS</div>
+  <div class="section-title">Error Messages (Relatable)</div>
+
+  <table class="err-table">
+    <thead>
+      <tr><th>Error Code</th><th>Trigger</th><th>MemeLang Error Message</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="err-code">ERR_001</span></td><td>Missing <code>padh le bhai</code></td><td><span class="err-msg">Bhai padha kya? Program shuru karna bhool gaya x</span></td></tr>
+      <tr><td><span class="err-code">ERR_002</span></td><td>Missing <code>main chala</code></td><td><span class="err-msg">Bhai gaya kahan? main chala likha nahi x</span></td></tr>
+      <tr><td><span class="err-code">ERR_003</span></td><td>Undeclared variable</td><td><span class="err-msg">Ye variable attend nahi kiya kabhi  undeclared hai yaar</span></td></tr>
+      <tr><td><span class="err-code">ERR_005</span></td><td>Division by zero</td><td><span class="err-msg">Zero se divide?! Bhai ye toh CGPA se bhi bura hai</span></td></tr>
+      <tr><td><span class="err-code">ERR_006</span></td><td>Missing semicolon</td><td><span class="err-msg">Semicolon bhool gaya  marks katenge bhai x</span></td></tr>
+      <tr><td><span class="err-code">ERR_007</span></td><td>Unclosed block <code>{</code></td><td><span class="err-msg">Curly bracket band nahi kiya  scope leak hua bhai</span></td></tr>
+      <tr><td><span class="err-code">ERR_008</span></td><td>Function called before declaration</td><td><span class="err-msg">Function bula raha hai jo aaya hi nahi  attendance zero</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<hr class="divider">
+
+<!-- LIVE IDE -->
+<div id="ide-section">
+  <div class="ide-wrapper">
+    <div class="ide-header-area">
+      <div class="section-label" style="text-align:center">// 07  LIVE INTERPRETER</div>
+      <div class="section-title" style="text-align:center;margin-bottom:12px">Run MemeLang Right Here</div>
+      <p style="text-align:center;margin-bottom:0">Code runs via the <strong style="color:var(--cyan)">Express.js backend API</strong>  full-stack, no shortcuts.</p>
+
+      <div class="backend-notice">
+        <span class="dot"> </span>
+        <span>Backend: <strong>POST /api/run</strong>   Lexer   Parser   Interpreter   JSON response. <strong>Node.js server-side execution.</strong></span>
+      </div>
+
+      <div class="preset-row" style="justify-content:center;margin-top:4px">
+        <button class="preset-btn" onclick="loadPreset('hello')">x9 Hello World</button>
+        <button class="preset-btn" onclick="loadPreset('cgpa')">x` CGPA Calc</button>
+        <button class="preset-btn" onclick="loadPreset('loop')">x Backlog Loop</button>
+        <button class="preset-btn" onclick="loadPreset('func')">xa Placement Fn</button>
+        <button class="preset-btn" onclick="loadPreset('btech')">x BTech Life Sim</button>
+        <button class="preset-btn" onclick="loadPreset('input')">R Input Demo</button>
+      </div>
+    </div>
+
+    <!-- STDIN Queue (for input programs) -->
+    <div class="stdin-queue-section" id="stdin-queue-section" style="display:none">
+      <div class="stdin-queue-label">R STDIN QUEUE  sun yaar ke liye inputs daalo pehle:</div>
+      <div class="stdin-queue-row">
+        <input type="text" id="stdin-queue-input" placeholder="e.g. Abhay or 7.5" autocomplete="off">
+        <button class="stdin-add-btn" onclick="addStdinItem()">+ Add</button>
+        <button class="stdin-clear-btn" onclick="clearStdin()">Clear</button>
+      </div>
+      <div id="stdin-items"></div>
+    </div>
+
+    <div class="ide-container">
+      <!-- TOP BAR -->
+      <div class="ide-topbar">
+        <div class="ide-dots">
+          <div class="ide-dot red"></div>
+          <div class="ide-dot yellow"></div>
+          <div class="ide-dot green"></div>
+        </div>
+        <div class="ide-file-tab" id="file-label">hello_world.meme</div>
+        <div class="ide-actions">
+          <button class="ide-tokens-btn" onclick="toggleTokenView()">} Tokens</button>
+          <button class="ide-clear-btn" onclick="clearOutput()">Clear</button>
+          <button class="ide-run-btn" onclick="runCode()" id="run-btn"> &nbsp;RUN .meme</button>
+        </div>
+      </div>
+
+      <!-- EDITOR + OUTPUT -->
+      <div class="ide-body">
+        <!-- EDITOR -->
+        <div class="editor-pane">
+          <div class="line-nums" id="line-nums"></div>
+          <textarea id="code-editor" spellcheck="false" autocorrect="off" autocapitalize="off"
+            oninput="updateLineNums()" onscroll="syncScroll()" onkeydown="handleTab(event)"
+          ></textarea>
+        </div>
+
+        <!-- OUTPUT -->
+        <div class="output-pane">
+          <div class="output-topbar-wrap">
+            <button class="output-tab active" id="tab-output" onclick="showTab('output')">Output</button>
+            <button class="output-tab" id="tab-tokens" onclick="showTab('tokens')">Token Stream</button>
+            <span class="output-status ready" id="output-status">READY</span>
+          </div>
+
+          <div id="output-console">
+            <div class="out-line sys">// MemeLang Interpreter v1.0  Core Dumpers Edition</div>
+            <div class="out-line sys">// Backend: Express.js API at /api/run</div>
+            <div class="out-line sys">// Click  RUN .meme to execute your program</div>
+          </div>
+
+          <div id="token-console">
+            <table class="token-table">
+              <thead>
+                <tr><th>#</th><th>Type</th><th>Value</th><th>Line</th></tr>
+              </thead>
+              <tbody id="token-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- COMPLETE PROGRAM -->
+<div class="section">
+  <div class="section-label">// 08  COMPLETE PROGRAM</div>
+  <div class="section-title">The Ultimate BTech Program</div>
+  <p>A complete MemeLang program demonstrating all features  variables, conditionals, loops, functions, and existential dread.</p>
+
+  <div class="code-block">
+    <div class="code-header">
+      <span class="code-filename">btech_life_simulator.meme</span>
+      <span class="code-lang">MemeLang v1.0</span>
+    </div>
+    <pre><span class="cmt">// bhai sun  ye program btech life simulate karta hai</span>
+<span class="cmt">/* ruk yaar
+   Compiler Design PBL  Team: Core Dumpers
+*/</span>
+
+<span class="kw">padh le bhai</span>
+
+  <span class="kw">yaar ye hai</span> cgpa = <span class="num">7.5</span>;
+  <span class="kw">yaar ye hai</span> attendance = <span class="num">68</span>;
+  <span class="kw">yaar ye hai</span> backlog = <span class="num">0</span>;
+
+  <span class="cmt">// attendance boost loop</span>
+  <span class="kw">yaar ye hai</span> i = <span class="num">0</span>;
+  <span class="kw">jab tak grind</span> (i &lt; <span class="num">10</span>) {
+    <span class="kw">agar scene ho</span> (i % <span class="num">2</span> == <span class="num">0</span>) {
+      i += <span class="num">1</span>;
+      <span class="kw">skip kar</span>;
+    }
+    attendance += <span class="num">3</span>;
+    i += <span class="num">1</span>;
+  }
+
+  <span class="kw">kaam karo</span> <span class="fn">check_future</span>(cg, att) {
+    <span class="kw">agar scene ho</span> (cg >= <span class="num">9.0</span> && att >= <span class="num">75</span>) {
+      <span class="kw">lele result</span> <span class="str">"FAANG ready hai bhai xa"</span>;
+    } <span class="kw">nahi to scene</span> (cg >= <span class="num">7.0</span>) {
+      <span class="kw">lele result</span> <span class="str">"Service company, thoda aur padh xa"</span>;
+    } <span class="kw">warna yaar</span> {
+      <span class="kw">lele result</span> <span class="str">"Bhai... GATE bharo x&"</span>;
+    }
+  }
+
+  <span class="kw">bol yaar</span> <span class="str">"=== BTech Life Report ==="</span>;
+  <span class="kw">bol yaar</span> <span class="str">"CGPA: "</span>, cgpa;
+  <span class="kw">bol yaar</span> <span class="str">"Final Attendance: "</span>, attendance;
+  <span class="kw">bol yaar</span> <span class="str">"Backlog: "</span>, backlog;
+  <span class="kw">bol yaar</span> <span class="str">"Future: "</span>, <span class="fn">check_future</span>(cgpa, attendance);
+  <span class="kw">bol yaar</span> <span class="str">"========================"</span>;
+
+<span class="kw">main chala</span></pre>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div style="font-family:'Bangers',cursive;font-size:32px;letter-spacing:3px;color:var(--text);margin-bottom:12px">MEME<span style="color:var(--yellow)">LANG</span></div>
+  <div>Team: <span>Core Dumpers</span>  Compiler Design PBL  BTech CSE 3rd Year</div>
+  <div style="margin-top:8px">Full-Stack: <span>Node.js + Express.js</span> backend  Recursive Descent Parser  Tree-Walk Interpreter</div>
+  <div style="margin-top:8px;font-size:10px">a Side effects: may cause sudden understanding of compiler theory  Not responsible for failed vivas</div>
+</footer>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
